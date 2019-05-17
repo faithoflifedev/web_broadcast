@@ -2,6 +2,16 @@
 
 {% block content %}
 	<div class="content">
-	    <div class="title">SlimBorn</div>
+		<div class="title">SKC Video Broadcast</div>
+		{% if auth.check %}
+		<br/>
+		input
+		<br/>
+		<img src="http://192.168.1.94/masjid.mjpeg" />
+		<br/>
+		output
+		<br/>
+		<iframe src="https://www.youtube.com/embed/live_stream?channel=UCnryUpLOoYOYhjAwN6E4Wvw" width="640" height="360" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+		{% endif %}
 	</div>
 {% endblock %}

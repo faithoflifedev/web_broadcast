@@ -6,8 +6,9 @@ session_start();
 
 require __DIR__ . '/../vendor/autoload.php';
 
-try {
-	$dotenv = (new \Dotenv\Dotenv(__DIR__ . '/../'))->load();
+try { 
+	$dotenv = Dotenv\Dotenv::create( __DIR__ . '/../' );
+	$dotenv->load();
 } catch (\Dotenv\Exception\InvalidPathException $e) {
 	//
 }
